@@ -51,8 +51,14 @@ midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // IMAGES //
 
 // NAV //
-// let navigation = document.querySelector("nav a");
-// navigation.setAttribute('src', siteContent["nav"]["nav-item-1"])
+const navItem = document.querySelectorAll('a');
+navItem.className = 'nav-item';
+const navToArray = Array.from(navItem);
+const theNav = navToArray.map((item, index) => {
+  item.style.textDecoration = 'none';
+  item.style.color = 'black';
+  return item.textContent = siteContent.nav[`nav-item-${index+1}`];
+});
 // NAV //
 
 // let topContent = document.querySelector("top-content text-content");
@@ -61,5 +67,6 @@ midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 // let headerFours = document.querySelectorAll("h4");
 // headerFours[0].textContent = siteContent['main-content']['features-h4'];
 
-let upperOne = document.querySelector("top-content text-content h4");
-upperOne.setAttribute('src', siteContent['main-content']['features']) 
+let upperOne = document.querySelector("top-content");
+upperOne.className = ('src', siteContent['main-content']["text-content"]) 
+
