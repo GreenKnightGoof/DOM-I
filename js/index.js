@@ -48,25 +48,90 @@ cta.setAttribute('src', siteContent["cta"]["img-src"])
 
 let midImage = document.getElementById("middle-img");
 midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
-// IMAGES //
+// IMAGES //////////////////////////////////////////////////////////////////
 
 // NAV //
 const navItem = document.querySelectorAll('a');
 navItem.className = 'nav-item';
 const navToArray = Array.from(navItem);
+
 const theNav = navToArray.map((item, index) => {
   item.style.textDecoration = 'none';
-  item.style.color = 'black';
+  item.style.color = 'green';
   return item.textContent = siteContent.nav[`nav-item-${index+1}`];
 });
-// NAV //
 
-// let topContent = document.querySelector("top-content text-content");
-// topContent.setAttribute('src', siteContent["main-content"]["features-h4"])
+let newNav = document.createElement('nav-item');
+newNav.textContent = "Getting that DOM"
+newNav.style.color = "green"
 
-// let headerFours = document.querySelectorAll("h4");
-// headerFours[0].textContent = siteContent['main-content']['features-h4'];
+let newerNav = document.createElement('nav-item');
+newerNav.textContent = "YaBoi is"
+newerNav.style.color = "green"
 
-let upperOne = document.querySelector("top-content");
-upperOne.className = ('src', siteContent['main-content']["text-content"]) 
+let navBody = document.querySelector('nav');
+navBody.appendChild(newNav)
 
+let newerNavBody = document.querySelector('nav');
+newerNavBody.prepend(newerNav)
+// NAV //////////////////////////////////////////////////////////
+
+
+
+//CTA
+let header = document.querySelector('.cta-text h1');
+header.innerHTML = "DOM <br> IS <br> AWESOME";
+
+let topButton = document.querySelector('.cta-text button');
+topButton.textContent = siteContent['cta']['button']
+/////////////////////////////////////////////////////////////////
+
+// MC
+// TC
+// Features and About
+let features = document.querySelector('.top-content .text-content:nth-child(1) h4');
+features.textContent = siteContent['main-content']['features-h4']
+
+let featuresPara = document.querySelector('.top-content .text-content:nth-child(1) p');
+featuresPara.textContent = siteContent['main-content']['features-content']
+
+let about = document.querySelector('.top-content .text-content:nth-child(2) h4');
+about.textContent = siteContent['main-content']['about-h4']
+
+let aboutPara = document.querySelector('.top-content .text-content:nth-child(2) p');
+aboutPara.textContent = siteContent['main-content']['about-content']
+/////////////////////////////////////////////////////////////////////
+
+// MC
+// BC
+// Services, Product, and Vision
+let services = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+services.textContent = siteContent['main-content']['services-h4']
+
+let servicesPara = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesPara.textContent = siteContent['main-content']['services-content']
+
+let product = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+product.textContent = siteContent['main-content']['product-h4']
+
+let productPara = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productPara.textContent = siteContent['main-content']['product-content']
+
+let vision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+vision.textContent = siteContent['main-content']['vision-h4']
+
+let visionPara = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+visionPara.textContent = siteContent['main-content']['vision-content']
+////////////////////////////////////////////////////////////////////////
+
+//Contact
+let contact = document.querySelector('.contact h4');
+contact.textContent = siteContent['contact']['contact-h4']
+
+let contactPara = document.querySelectorAll('.contact p');
+contactPara[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+contactPara[1].textContent = siteContent['contact']['phone']
+contactPara[2].textContent = siteContent['contact']['email']
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright']
