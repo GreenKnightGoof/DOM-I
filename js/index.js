@@ -80,4 +80,11 @@ newerNavBody.prepend(newerNav);
 
 // NAV ITEMS ABOVE
 
+let header = document.querySelector('.cta-text h1')
+header.innerHTML = "DOM <br> IS <br> AWESOME";
+
+let topButton = document.querySelector('.cta-text button')
+topButton.textContent = siteContent['cta']['button']
+
+// TOP CONTENT ABOVE
 
