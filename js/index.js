@@ -46,17 +46,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-let cta = document.getElementById("cta-img");
-cta.setAttribute("src", siteContent["cta"]["img-src"]);
+let ctaIMG = document.getElementById("cta-img");
+ctaIMG.setAttribute("src", siteContent["cta"]["img-src"]);
 
-let midImage = document.getElementById("middle-img");
-midImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 // IMAGES ABOVE
 
-const navItem = document.querySelectorAll("a");
-navItem.className = "nav-item";
-const navToArray = Array.from(navItem);
+const navigationItem = document.querySelectorAll("a");
+navigationItem.className = "nav-item";
+const navToArray = Array.from(navigationItem);
 
 const theNav = navToArray.map((item, index) => {
   item.style.textDecoration = "none";
@@ -64,73 +64,73 @@ const theNav = navToArray.map((item, index) => {
   return item.textContent = siteContent.nav[`nav-item-${index+1}`];
 });
 
-let newNav = document.createElement("nav-item");
-newNav.textContent = "Affiliates";
-newNav.style.color = "green";
+let newNavItemOne = document.createElement("nav-item");
+newNavItemOne.textContent = "Affiliates";
+newNavItemOne.style.color = "green";
 
-let newerNav = document.createElement("nav-item");
-newerNav.textContent = "Topics";
-newerNav.style.color = "green";
+let newNavItemTwo = document.createElement("nav-item");
+newNavItemTwo.textContent = "Topics";
+newNavItemTwo.style.color = "green";
 
 let navBody = document.querySelector("nav");
-navBody.appendChild(newNav);
+navBody.appendChild(newNavItemOne);
 
 let newerNavBody = document.querySelector("nav");
-newerNavBody.prepend(newerNav);
+newerNavBody.prepend(newNavItemTwo);
 
 // NAV ITEMS ABOVE
 
-let header = document.querySelector('.cta-text h1')
-header.innerHTML = "DOM <br> IS <br> AWESOME";
+let ctaHeaderText = document.querySelector('.cta-text h1')
+ctaHeaderText.innerHTML = "DOM <br> IS <br> AWESOME";
 
-let topButton = document.querySelector('.cta-text button')
-topButton.textContent = siteContent['cta']['button']
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent['cta']['button']
 
 // TOP CONTENT ABOVE
 
-let features = document.querySelector('.top-content .text-content:nth-child(1) h4');
-features.textContent = siteContent['main-content']['features-h4']
+let featuresSection = document.querySelector('.top-content .text-content:nth-child(1) h4');
+featuresSection.textContent = siteContent['main-content']['features-h4']
 
-let featuresPara = document.querySelector('.top-content .text-content:nth-child(1) p');
-featuresPara.textContent = siteContent['main-content']['features-content']
+let featuresParagraph = document.querySelector('.top-content .text-content:nth-child(1) p');
+featuresParagraph.textContent = siteContent['main-content']['features-content']
 
-let about = document.querySelector('.top-content .text-content:nth-child(2) h4');
-about.textContent = siteContent['main-content']['about-h4']
+let aboutSection = document.querySelector('.top-content .text-content:nth-child(2) h4');
+aboutSection.textContent = siteContent['main-content']['about-h4']
 
-let aboutPara = document.querySelector('.top-content .text-content:nth-child(2) p');
-aboutPara.textContent = siteContent['main-content']['about-content']
+let aboutParagraph = document.querySelector('.top-content .text-content:nth-child(2) p');
+aboutParagraph.textContent = siteContent['main-content']['about-content']
 
 // TOP MIDDLE CONTENT ABOVE
 
-let services = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
-services.textContent = siteContent['main-content']['services-h4']
+let servicesSection = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+servicesSection.textContent = siteContent['main-content']['services-h4']
 
-let servicesPara = document.querySelector('.bottom-content .text-content:nth-child(1) p');
-servicesPara.textContent = siteContent['main-content']['services-content']
+let servicesParagraph = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesParagraph.textContent = siteContent['main-content']['services-content']
 
-let product = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
-product.textContent = siteContent['main-content']['product-h4']
+let productSection = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+productSection.textContent = siteContent['main-content']['product-h4']
 
-let productPara = document.querySelector('.bottom-content .text-content:nth-child(2) p');
-productPara.textContent = siteContent['main-content']['product-content']
+let productParagraph = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productParagraph.textContent = siteContent['main-content']['product-content']
 
-let vision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
-vision.textContent = siteContent['main-content']['vision-h4']
+let visionSection = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+visionSection.textContent = siteContent['main-content']['vision-h4']
 
-let visionPara = document.querySelector('.bottom-content .text-content:nth-child(3) p');
-visionPara.textContent = siteContent['main-content']['vision-content']
+let visionParagraph = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+visionParagraph.textContent = siteContent['main-content']['vision-content']
 
 // BOTTOM MIDDLE CONTENT ABOVE
 
-let contact = document.querySelector('.contact h4');
-contact.textContent = siteContent['contact']['contact-h4']
+let contactSection = document.querySelector('.contact h4');
+contactSection.textContent = siteContent['contact']['contact-h4']
 
-let contactPara = document.querySelectorAll('.contact p');
-contactPara[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
-contactPara[1].textContent = siteContent['contact']['phone']
-contactPara[2].textContent = siteContent['contact']['email']
+let contactParagraph = document.querySelectorAll('.contact p');
+contactParagraph[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+contactParagraph[1].textContent = siteContent['contact']['phone']
+contactParagraph[2].textContent = siteContent['contact']['email']
 
-let footer = document.querySelector('footer p');
-footer.textContent = siteContent['footer']['copyright']
+let footerSection = document.querySelector('footer p');
+footerSection.textContent = siteContent['footer']['copyright']
 
 // CONTACT AND FOOTER ABOVE
