@@ -121,3 +121,16 @@ let visionPara = document.querySelector('.bottom-content .text-content:nth-child
 visionPara.textContent = siteContent['main-content']['vision-content']
 
 // BOTTOM MIDDLE CONTENT ABOVE
+
+let contact = document.querySelector('.contact h4');
+contact.textContent = siteContent['contact']['contact-h4']
+
+let contactPara = document.querySelectorAll('.contact p');
+contactPara[0].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+contactPara[1].textContent = siteContent['contact']['phone']
+contactPara[2].textContent = siteContent['contact']['email']
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright']
+
+// CONTACT AND FOOTER ABOVE
