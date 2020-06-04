@@ -88,3 +88,36 @@ topButton.textContent = siteContent['cta']['button']
 
 // TOP CONTENT ABOVE
 
+let features = document.querySelector('.top-content .text-content:nth-child(1) h4');
+features.textContent = siteContent['main-content']['features-h4']
+
+let featuresPara = document.querySelector('.top-content .text-content:nth-child(1) p');
+featuresPara.textContent = siteContent['main-content']['features-content']
+
+let about = document.querySelector('.top-content .text-content:nth-child(2) h4');
+about.textContent = siteContent['main-content']['about-h4']
+
+let aboutPara = document.querySelector('.top-content .text-content:nth-child(2) p');
+aboutPara.textContent = siteContent['main-content']['about-content']
+
+// TOP MIDDLE CONTENT ABOVE
+
+let services = document.querySelector('.bottom-content .text-content:nth-child(1) h4');
+services.textContent = siteContent['main-content']['services-h4']
+
+let servicesPara = document.querySelector('.bottom-content .text-content:nth-child(1) p');
+servicesPara.textContent = siteContent['main-content']['services-content']
+
+let product = document.querySelector('.bottom-content .text-content:nth-child(2) h4');
+product.textContent = siteContent['main-content']['product-h4']
+
+let productPara = document.querySelector('.bottom-content .text-content:nth-child(2) p');
+productPara.textContent = siteContent['main-content']['product-content']
+
+let vision = document.querySelector('.bottom-content .text-content:nth-child(3) h4');
+vision.textContent = siteContent['main-content']['vision-h4']
+
+let visionPara = document.querySelector('.bottom-content .text-content:nth-child(3) p');
+visionPara.textContent = siteContent['main-content']['vision-content']
+
+// BOTTOM MIDDLE CONTENT ABOVE
